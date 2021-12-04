@@ -18,6 +18,7 @@ import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListene
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus;
 import com.google.android.play.core.tasks.OnFailureListener;
 import com.google.android.play.core.tasks.OnSuccessListener;
+import com.google.android.play.core.splitinstall.SplitInstallManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         SplitInstallRequest request =
                 SplitInstallRequest
                         .newBuilder()
-                        .addModule("dynamic-module")
+                        .addModule("dynamicmodule")
                         .build();
 
         SplitInstallStateUpdatedListener listener = new SplitInstallStateUpdatedListener() {
